@@ -43,11 +43,7 @@ stages:
             command: 'build'
             Dockerfile: '**/Dockerfile'
             tags: '$(tag)'
-    - task: Docker@2
-      inputs:
-            containerRegistry: 'docker'
-            repository: 'springim'
-            command: 'push'
+
 - stage: deploy
   jobs:
   - job: BuildAndTest
