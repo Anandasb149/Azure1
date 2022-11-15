@@ -48,7 +48,7 @@ stages:
             containerRegistry: 'docker'
             repository: 'springim'
             command: 'push'
-- stage: Build
+- stage: deploy
   jobs:
   - job: BuildAndTest
     pool:
