@@ -15,7 +15,7 @@ stages:
   jobs:
   - job: BuildAndTest
     pool:
-      vmImage: 'Ubuntu-16.04'
+      vmImage: 'Ubuntu-Latest'
     steps:
     - task: Maven@4
       inputs:
