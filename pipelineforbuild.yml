@@ -39,10 +39,12 @@ stages:
     - task: Docker@2
       displayName: Build an image
       inputs:
-            containerRegistry: 'docker'
-            command: 'build'
-            Dockerfile: '**/Dockerfile'
-            tags: '$(tag)'
+        containerRegistry: 'docker'
+        repository: 'Anand'
+        command: 'build'
+        Dockerfile: '**/Dockerfile'
+
+        tags: '$(tag)'
 
 - stage: deploy
   jobs:
@@ -54,3 +56,4 @@ stages:
       inputs:
         azureSubscription: 'BFSI_LGI_DevOps_Training_POC (f3f0b402-1498-4537-9728-704a780011a0)'
         appName: 'arunsite'
+        containers: 'Anand'
